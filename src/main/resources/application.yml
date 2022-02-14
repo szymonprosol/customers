@@ -1,0 +1,27 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: customer
+  profiles:
+    active: production
+  datasource:
+    url: ${kodilla_customers.datasource.url}
+    username: ${kodilla_customers.datasource.username}
+    password: ${kodilla_customers.datasource.password}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${kodilla_customers.datasource.ddl-mode}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+info:
+  app:
+    name: "customer"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
