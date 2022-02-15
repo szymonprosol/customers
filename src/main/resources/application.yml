@@ -25,5 +25,7 @@ info:
     profile: ${spring.profiles.active}
   serverInfo:
     port: ${server.port}
+eureka:
+  client: ${eureka-client}
 application:
   allow-get-customer: ${kodilla_customers.allow-get-customer}
