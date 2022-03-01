@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "accounts")
+@FeignClient(name = "accounts", fallback = AccountsConnectorFallback.class)
 public interface AccountsConnector {
 
     @GetMapping("/v1/accounts")

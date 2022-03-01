@@ -29,3 +29,6 @@ eureka:
   client: ${eureka-client}
 application:
   allow-get-customer: ${kodilla_accounts.allow-get-customer}
+feign:
+  hystrix:
+    enabled: true
